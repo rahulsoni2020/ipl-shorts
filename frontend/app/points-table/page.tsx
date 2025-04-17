@@ -1,4 +1,5 @@
 "use client";
+import Error from "@/components/Error";
 import ROUTES from "@/constants/route.constants";
 import useFetchData from "@/hooks/useFetchData";
 import { useEffect, useState } from "react";
@@ -43,8 +44,17 @@ export default function PointsTable() {
     fetchData();
   }, [selectedSeason]);
 
-  const getFormColor = (result: string): string =>
-    result === "W" ? "text-green-600 border-green-600" : "text-red-500 border-red-500";
+  if (loading) {
+    return (
+      <div className="fixed inset-0 bg-white-200 flex items-center justify-center z-50">
+        <div className="w-12 h-12 bg-blue-500 rounded-full animate-bounce shadow-lg" />
+      </div>
+    )
+  }
+
+  if (error) {
+    return <Error/>;
+  }
 
   return (
     <div className="max-w-screen-xl mx-auto p-4">

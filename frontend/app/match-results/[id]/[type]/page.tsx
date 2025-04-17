@@ -89,7 +89,7 @@ export default function MatchResults() {
 
 
   if (matchLoading) {
-    return   <div className="fixed inset-0 bg-white flex items-center justify-center z-50">
+    return   <div className="fixed inset-0 bg-white-200 flex items-center justify-center z-50">
     <div className="w-12 h-12 bg-blue-500 rounded-full animate-bounce shadow-lg" />
   </div>;
   }
@@ -216,7 +216,7 @@ export default function MatchResults() {
               </div>
             )
           }
-          
+
         </div>
     </div>
   );

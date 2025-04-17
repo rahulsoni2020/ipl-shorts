@@ -45,9 +45,9 @@ const Header = () => {
 
       {mobileOpen && (
         <div className="md:hidden px-4 pb-4 space-y-2 text-gray-700 font-medium">
-          <Link href="/" onClick={() => setMobileOpen(false)} className="block hover:text-blue-600">Home</Link>
-          <Link href="/about" onClick={() => setMobileOpen(false)} className="block hover:text-blue-600">About</Link>
-          <Link href="/contact" onClick={() => setMobileOpen(false)} className="block hover:text-blue-600">Contact</Link>
+          <Link href="/" className={`block hover:text-blue-600 ${getLinkClass("/")}`} onClick={() => setMobileOpen(false)} >Home</Link>
+          <Link href="/results" className={`block hover:text-blue-600 ${getLinkClass("/results")}`} onClick={() => setMobileOpen(false)} >Results</Link>
+          <Link href="/points-table" className={`block hover:text-blue-600 ${getLinkClass("/points-table")}`} onClick={() => setMobileOpen(false)} >Points Table</Link>
         </div>
       )}
     </header>
