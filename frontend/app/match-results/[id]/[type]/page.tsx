@@ -182,7 +182,7 @@ export default function MatchResults() {
         <div className="space-y-8">
         {/* Tab Navigation */}
         <div className="flex justify-start gap-2 mb-6 overflow-x-auto border-b border-gray-300">
-      {['batter', 'bowler', 'teamPlayers'].map((tab) => (
+      {['batter', 'bowler'].map((tab) => (
         <button
           key={tab}
           className={`px-5 py-2 text-sm font-semibold transition duration-300 rounded-t-md focus:outline-none whitespace-nowrap
@@ -194,7 +194,7 @@ export default function MatchResults() {
       ))}
     </div>
         
-        {matchData?.data && scoreLoading && (
+        {matchData?.data && !scoreLoading && (
           <>
             {activeTab === 'batter' && (
               <BatterTable data={matchData.data} selectedTeam={selectedTeam} />
@@ -211,7 +211,7 @@ export default function MatchResults() {
         )}
           {
             scoreLoading && (
-              <div className="inset-0 bg-white flex items-center justify-center z-50">
+              <div className="inset-0 bg-white flex items-center justify-center p-20 z-50">
                 <div className="w-12 h-12 bg-blue-500 rounded-full animate-bounce shadow-lg" />
               </div>
             )
