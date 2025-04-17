@@ -18,19 +18,19 @@ Welcome to the **IPLShot** project! This full-stack application provides IPL mat
 ## Features
 
 ### 1. Upcoming Matches
-![Upcoming Matches](sreenshots/upcoming_matches.png)
+![Upcoming Matches](screenshots/upcoming_matches.png)
 Displays a list of upcoming IPL matches on the homepage.
 
 ### 2. Past Match Results
-![Past Match Results](sreenshots/results.png)
+![Past Match Results](screenshots/results.png)
 Allows users to view the results of past IPL matches.
 
 ### 3. Points Table
-![Points Table](sreenshots/point_table.png)
+![Points Table](screenshots/point_table.png)
 Shows the current IPL points table.
 
 ### 4. Match Scorecard
-![Match Scorecard](sreenshots/match_details.png)
+![Match Scorecard](screenshots/match_details.png)
 Provides detailed scorecards for specific IPL matches.
 
 ## Installation and Setup
