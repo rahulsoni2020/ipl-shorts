@@ -85,10 +85,3 @@ Provides detailed scorecards for specific IPL matches.
 - **Backend**: The backend handles business logic and serves the scraped data to the frontend.
 - **Frontend**: The frontend displays the data, providing users with an interactive and responsive interface built using Tailwind CSS.
 
-## Contributing
-
-Feel free to fork the project and submit pull requests for any improvements or bug fixes. Please make sure to test your changes and provide adequate documentation.
-
-## License
-
-This project is licensed under the **MIT License**.
