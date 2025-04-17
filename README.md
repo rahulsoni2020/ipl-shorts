@@ -1,7 +1,7 @@
 
-# IPLShot Project
+# IPLShort Project
 
-Welcome to the **IPLShot** project! This full-stack application provides IPL match data, including upcoming matches, past match results, the points table, and individual match scorecards. The project includes both the frontend and backend in a single repository.
+Welcome to the **IPLShort** project! This full-stack application provides IPL match data, including upcoming matches, past match results, the points table, and individual match scorecards. The project includes both the frontend and backend in a single repository.
 
 ## Technologies Used
 
@@ -55,7 +55,7 @@ Provides detailed scorecards for specific IPL matches.
    npm start
    ```
 
-   The backend server will run on **port 3003**.
+   The backend server will run on **http://localhost:3003**.
 
 ### Frontend Setup:
 
