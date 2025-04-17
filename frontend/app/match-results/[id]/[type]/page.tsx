@@ -89,11 +89,13 @@ export default function MatchResults() {
 
 
   if (matchLoading) {
-    return <Error/>;
+    return   <div className="fixed inset-0 bg-white flex items-center justify-center z-50">
+    <div className="w-12 h-12 bg-blue-500 rounded-full animate-bounce shadow-lg" />
+  </div>;
   }
 
   if (matchError) {
-    return <div className="text-center py-10 text-red-500">Failed to fetch data.</div>;
+    return <Error/>;
   }
 
   if (!matchDetails) {
@@ -191,18 +193,30 @@ export default function MatchResults() {
         </button>
       ))}
     </div>
-      
-          {activeTab === 'batter' && matchData && (
-            <BatterTable data={matchData.data} selectedTeam={selectedTeam} />
-          )}
+        
+        {matchData?.data && scoreLoading && (
+          <>
+            {activeTab === 'batter' && (
+              <BatterTable data={matchData.data} selectedTeam={selectedTeam} />
+            )}
 
-          {activeTab === 'bowler' && matchData && (
-            <BowlerTable data={matchData.data} selectedTeam={selectedTeam} />
-          )}
+            {activeTab === 'bowler' && (
+              <BowlerTable data={matchData.data} selectedTeam={selectedTeam} />
+            )}
 
-          {activeTab === 'teamPlayers' && matchData && (
-            <TeamPlayers data={matchData.data} selectedTeam={selectedTeam} />
-          )}
+            {activeTab === 'teamPlayers' && (
+              <TeamPlayers data={matchData.data} selectedTeam={selectedTeam} />
+            )}
+          </>
+        )}
+          {
+            scoreLoading && (
+              <div className="inset-0 bg-white flex items-center justify-center z-50">
+                <div className="w-12 h-12 bg-blue-500 rounded-full animate-bounce shadow-lg" />
+              </div>
+            )
+          }
+          
         </div>
     </div>
   );

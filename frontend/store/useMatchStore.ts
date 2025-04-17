@@ -11,10 +11,7 @@ export const useMatchStore = create((set, get) =>({
         set({isLoading:true});
         try {
             const res = await axiosInstance.get(ROUTES.UPCOMING_MATCHES);
-            console.log(res);
-
         } catch (error) {
-            console.log(error)
         }finally{
             set({isMessagesLoading:false});
         }

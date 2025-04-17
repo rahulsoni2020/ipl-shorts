@@ -26,6 +26,7 @@ const scrapePointsTable = async (year = '2025', type = 'men') => {
   });
 
   await page.goto(`https://www.iplt20.com/points-table/${type}/${year}`, { waitUntil: 'networkidle2' });
+  page.on('console', msg => console.log('PAGE LOG:', msg.text()));
 
   await page.evaluate(() => {
     const tabs = Array.from(document.querySelectorAll('.cSBListItems'));

@@ -30,11 +30,10 @@ const matchesScraper = async (isPastMatches = false) => {
   await page.goto(`https://www.iplt20.com/matches/${isPastMatches ? 'results': 'fixtures'}`, { waitUntil: 'networkidle2' });
 
   await page.waitForSelector('.vn-sheduleList',{ timeout: 10000 });
-  await new Promise(resolve => setTimeout(resolve, 2000));
+  await new Promise(resolve => setTimeout(resolve, 1000));
 
   const matchData = await page.evaluate(() => {
     const matchBlocks = Array.from(document.querySelectorAll('#team_archive li'));
-    console.log(matchBlocks);
     return matchBlocks.map(block => {
       const extractText = selector => block.querySelector(selector)?.textContent.trim() || '';
       const extractAttr = (selector, attr) => block.querySelector(selector)?.getAttribute(attr) || '';
@@ -96,8 +95,7 @@ const matchesScraper = async (isPastMatches = false) => {
       return match;
     });
   });
-  
-console.log(matchData)
+
   await browser.close();
   return {
     data: matchData,

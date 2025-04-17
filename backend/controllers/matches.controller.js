@@ -1,21 +1,31 @@
 const { matchesScraper } = require("../scrapers/matches.scraper");
 const { matchScoreCardScraper } = require("../scrapers/matchScoreCard.scraper");
+const pastMatches = require("./../fallbackData/pastMatches"); 
+const upcomingMatches = require("./../fallbackData/upcomingMatches");
 
 const upcomingMatchesController = async (req, res) => {
     try {
-      console.log('getting upcoming match data');
-        const data = await matchesScraper(false);
-        console.log(data);
-        res.status(200).json(data);
+        // for scraping data
+        // const data = await matchesScraper(false);
+        // return res.status(200).json(data);
+        //static data
+        return res.status(200).json({
+          data: upcomingMatches,
+        });
       } catch (error) {
-        res.status(500).json({ error: 'Failed to scrape Match Details', details: error.message });
+        return res.status(500).json({ error: 'Failed to scrape Match Details', details: error.message });
       }
 }
 
 const pastMatchesController = async (req, res) => {
     try {
-        const data = await matchesScraper(true);
-        res.status(200).json(data);
+        // for scraping data
+        // const data = await matchesScraper(true);
+        // res.status(200).json(data);
+        //  uncomment for static data
+        return res.status(200).json({
+          data: pastMatches,
+        });
     } catch (error) {
       res.status(500).json({ error: 'Failed to scrape Match Details', details: error.message });
     }
