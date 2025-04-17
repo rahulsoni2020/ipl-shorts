@@ -18,26 +18,31 @@ Welcome to the **IPLShot** project! This full-stack application provides IPL mat
 ## Features
 
 ### 1. Upcoming Matches
-![Upcoming Matches](sreenshots/upcoming_matches.jpg)
+![Upcoming Matches](sreenshots/upcoming_matches.png)
 Displays a list of upcoming IPL matches on the homepage.
 
 ### 2. Past Match Results
-![Past Match Results](sreenshots/results.jpg)
+![Past Match Results](sreenshots/results.png)
 Allows users to view the results of past IPL matches.
 
 ### 3. Points Table
-![Points Table](sreenshots/point_table.jpg)
+![Points Table](sreenshots/point_table.png)
 Shows the current IPL points table.
 
 ### 4. Match Scorecard
-![Match Scorecard](sreenshots/match_details.jpg)
+![Match Scorecard](sreenshots/match_details.png)
 Provides detailed scorecards for specific IPL matches.
 
 ## Installation and Setup
+1. Navigate to the root directory of the project.
 
 ### Backend Setup:
 
-1. Navigate to the root directory of the project.
+1. Navigate to the `backend` directory:
+
+   ```bash
+   cd backend
+   ```
 2. Install backend dependencies:
 
    ```bash
